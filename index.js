@@ -24,10 +24,15 @@ if (title.textContent === "Projekt") {
     name: "Fotbolls-sida",
     href: "https://richardmattsson.github.io/SoccerStats/",
   };
+  const blackJack = {
+    name: "Black-jack",
+    href: "https://richardmattsson.github.io/blackjack2/",
+  };
 
   createProjectLinks(shoppingList);
   createProjectLinks(ericaPaintings);
   createProjectLinks(soccerStats);
+  createProjectLinks(blackJack);
 
   function createProjectLinks(project) {
     const li = document.createElement("li");
