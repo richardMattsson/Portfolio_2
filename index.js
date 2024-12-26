@@ -11,36 +11,36 @@ title.textContent = titleFromHome;
 
 console.log(title.textContent);
 
-if (title.textContent === "Projekt") {
+if (title.textContent === "Projects") {
   const shoppingList = {
-    name: "Shopping-lista",
+    name: "Project on making a simple shoppinglist",
     href: "https://richardmattsson.github.io/shoppingList/",
   };
   const ericaPaintings = {
-    name: "Ericas målningar",
+    name: "Example website for a painter artist",
     href: "https://richardmattsson.github.io/Erica/",
   };
   const soccerStats = {
-    name: "Fotbolls-sida",
+    name: "My site about european fotball",
     href: "https://richardmattsson.github.io/SoccerStats/",
   };
   const blackJack = {
-    name: "Black-jack",
+    name: "The cardgame 'Black-jack'",
     href: "https://richardmattsson.github.io/blackjack2/",
   };
 
-  createProjectLinks(shoppingList);
-  createProjectLinks(ericaPaintings);
-  createProjectLinks(soccerStats);
   createProjectLinks(blackJack);
+  createProjectLinks(soccerStats);
+  createProjectLinks(ericaPaintings);
+  createProjectLinks(shoppingList);
 
   function createProjectLinks(project) {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.classList.add("projectLinks");
-    a.textContent = project.name;
+    li.textContent = project.name;
     a.setAttribute("href", project.href);
-    li.appendChild(a);
-    ul.appendChild(li);
+    a.appendChild(li);
+    ul.appendChild(a);
   }
 }
