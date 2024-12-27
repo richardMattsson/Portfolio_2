@@ -25,7 +25,7 @@ if (title.textContent === "Projects") {
     href: "https://richardmattsson.github.io/SoccerStats/",
   };
   const blackJack = {
-    name: "The cardgame 'Black-jack'",
+    name: "The card game 'Black-jack'",
     href: "https://richardmattsson.github.io/blackjack2/",
   };
 

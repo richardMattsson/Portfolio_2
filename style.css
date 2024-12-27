@@ -123,4 +123,10 @@ li:hover {
     /* margin-top: 20%; */
     /* border: 1px solid white; */
   }
+  p {
+    width: 480px;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    /* border: 1px solid white; */
+  }
 }
