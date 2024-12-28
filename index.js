@@ -28,7 +28,12 @@ if (title.textContent === "Projects") {
     name: "The card game 'Black-jack'",
     href: "https://richardmattsson.github.io/blackjack2/",
   };
+  const weatherApp = {
+    name: "WeatherApp",
+    href: "https://richardmattsson.github.io/weatherApp/",
+  };
 
+  createProjectLinks(weatherApp);
   createProjectLinks(blackJack);
   createProjectLinks(soccerStats);
   createProjectLinks(ericaPaintings);
