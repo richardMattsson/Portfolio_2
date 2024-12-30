@@ -3,6 +3,7 @@ console.log("hej");
 const title = document.querySelector("#title");
 const ul = document.querySelector("#ul");
 const main = document.querySelector("#main");
+const home = document.querySelector("#home");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -61,3 +62,7 @@ if (title.textContent === "Projects") {
     main.appendChild(a);
   }
 }
+
+home.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
