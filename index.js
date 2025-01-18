@@ -10,10 +10,14 @@ const urlParams = new URLSearchParams(queryString);
 const titleFromHome = urlParams.get("title");
 
 title.textContent = titleFromHome;
-
 console.log(title.textContent);
 
 if (title.textContent === "Projects") {
+  const shoppingListVue = {
+    name: "Todo-list using Vue framework",
+    href: "https://richardmattsson.github.io/Todo-List/",
+    img: "todolistvue.png",
+  };
   const shoppingList = {
     name: "Project on making a simple shoppinglist",
     href: "https://richardmattsson.github.io/shoppingList/",
@@ -45,6 +49,7 @@ if (title.textContent === "Projects") {
   createProjectLinks(soccerStats);
   createProjectLinks(ericaPaintings);
   createProjectLinks(shoppingList);
+  createProjectLinks(shoppingListVue);
 
   function createProjectLinks(project) {
     const img = document.createElement("img");

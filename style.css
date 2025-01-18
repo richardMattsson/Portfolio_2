@@ -129,6 +129,17 @@ li:hover {
   background-color: rgb(103, 95, 95);
 }
 
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#linkedInLogo {
+  /* width: 30%; */
+  max-width: 100px;
+}
+
 @media screen and (min-width: 480px) {
   section {
     display: flex;
