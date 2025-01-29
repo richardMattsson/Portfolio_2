@@ -1,47 +1,45 @@
-console.log("hej");
-
-const title = document.querySelector("#title");
-const ul = document.querySelector("#ul");
-const main = document.querySelector("#main");
-const home = document.querySelector("#home");
+const title = document.querySelector('#title');
+const ul = document.querySelector('#ul');
+const main = document.querySelector('#main');
+const home = document.querySelector('#home');
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const titleFromHome = urlParams.get("title");
+const titleFromHome = urlParams.get('title');
 
 title.textContent = titleFromHome;
 console.log(title.textContent);
 
-if (title.textContent === "Projects") {
+if (title.textContent === 'Projects') {
   const shoppingListVue = {
-    name: "Todo-list using Vue framework",
-    href: "https://richardmattsson.github.io/Todo-List/",
-    img: "todolistvue.png",
+    name: 'Todo-list using Vue framework',
+    href: 'https://richardmattsson.github.io/Todo-List/',
+    img: 'todolistvue.png',
   };
   const shoppingList = {
-    name: "Project on making a simple shoppinglist",
-    href: "https://richardmattsson.github.io/shoppingList/",
-    img: "shoppingList.png",
+    name: 'Project on making a simple shoppinglist',
+    href: 'https://richardmattsson.github.io/shoppingList/',
+    img: 'shoppingList.png',
   };
   const ericaPaintings = {
-    name: "Example website for a painter artist",
-    href: "https://richardmattsson.github.io/Erica/",
-    img: "erica.png",
+    name: 'Example website for a painter artist',
+    href: 'https://richardmattsson.github.io/Erica/',
+    img: 'erica.png',
   };
   const soccerStats = {
-    name: "My site about european fotball",
-    href: "https://richardmattsson.github.io/SoccerStats/",
-    img: "soccerStat.png",
+    name: 'My site about european fotball',
+    href: 'https://richardmattsson.github.io/SoccerStats/',
+    img: 'soccerStat.png',
   };
   const blackJack = {
     name: "The card game 'Black-jack'",
-    href: "https://richardmattsson.github.io/blackjack2/",
-    img: "blackjack.png",
+    href: 'https://richardmattsson.github.io/blackjack2/',
+    img: 'blackjack.png',
   };
   const weatherApp = {
-    name: "WeatherApp",
-    href: "https://richardmattsson.github.io/weatherApp/",
-    img: "weather.png",
+    name: 'WeatherApp',
+    href: 'https://richardmattsson.github.io/weatherApp/',
+    img: 'weather.png',
   };
 
   createProjectLinks(weatherApp);
@@ -52,15 +50,15 @@ if (title.textContent === "Projects") {
   createProjectLinks(shoppingListVue);
 
   function createProjectLinks(project) {
-    const img = document.createElement("img");
-    img.setAttribute("src", project.img);
-    img.classList.add("projectImg");
+    const img = document.createElement('img');
+    img.setAttribute('src', project.img);
+    img.classList.add('projectImg');
     // const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.classList.add("projectLinks");
+    const a = document.createElement('a');
+    a.classList.add('projectLinks');
     // li.textContent = project.name;
     // li.appendChild(img);
-    a.setAttribute("href", project.href);
+    a.setAttribute('href', project.href);
     // a.appendChild(li);
     a.appendChild(img);
     // ul.appendChild(a);
@@ -68,6 +66,32 @@ if (title.textContent === "Projects") {
   }
 }
 
-home.addEventListener("click", () => {
-  window.location.href = "index.html";
+home.addEventListener('click', () => {
+  window.location.href = 'index.html';
 });
+
+const app = Vue.createApp({});
+
+const Home = {
+  template: `
+  <h1>Home</h1>
+  `,
+};
+
+const Projects = {
+  template: `
+  <h1>Projects</h1>
+  `,
+};
+
+const routes = [
+  { component: Home, path: '/' },
+  { component: Projects, path: '/projects' },
+];
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes,
+});
+
+app.mount('#app');
